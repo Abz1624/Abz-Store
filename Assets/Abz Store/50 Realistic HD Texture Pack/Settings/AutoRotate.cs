@@ -1,15 +1,18 @@
 using UnityEngine;
 
-public class AutoRotate : MonoBehaviour
+namespace Abzstore
 {
-    [Header("Rotation Speed")]
-    public float rotationSpeed = 30f;
-
-    [Header("Rotation Axis")]
-    public Vector3 rotationAxis = Vector3.up;
-
-    private void Update()
+    public class AutoRotate : MonoBehaviour
     {
-        transform.Rotate(rotationAxis * rotationSpeed * Time.deltaTime, Space.World);
+        [Header("Rotation Speed")]
+        public float rotationSpeed = 30f;
+
+        [Header("Rotation Axis")]
+        public Vector3 rotationAxis = Vector3.up;
+
+        private void Update()
+        {
+            transform.Rotate(rotationAxis * rotationSpeed * Time.deltaTime, Space.World);
+        }
     }
 }
